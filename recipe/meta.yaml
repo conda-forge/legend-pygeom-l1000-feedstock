@@ -35,7 +35,7 @@ requirements:
     - pylegendmeta >=v0.9.0
     - pyyaml
     - scipy
-    # - git
+    - git
 
 test:
   imports:
