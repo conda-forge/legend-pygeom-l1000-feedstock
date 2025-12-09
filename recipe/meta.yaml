@@ -1,5 +1,5 @@
 {% set name = "legend-pygeom-l1000" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/legend_pygeom_l1000-{{ version }}.tar.gz
-  sha256: 7b4575c2d33775a07b520542c4f089ed368296b64b37a3d347c075f0dfa7e7ae
+  sha256: b5fac159de54185b0952d3b98d62623fecc1b9afbb09c2434a3e447dde9e0343
 
 build:
   noarch: python
@@ -25,14 +25,14 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - legend-pygeom-hpges
-    - legend-pygeom-optics >=0.13
-    - legend-pygeom-tools >=0.0.18
+    - legend-pygeom-hpges >=0.9.0
+    - legend-pygeom-optics >=0.15
+    - legend-pygeom-tools >=0.0.25
     - numpy
     - pint
     - pyg4ometry
     - dbetto
-    - pylegendmeta >=v0.9.0
+    - pylegendmeta >=1.3.1
     - pyyaml
     - scipy
     - git
