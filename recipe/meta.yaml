@@ -13,9 +13,9 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   entry_points:
-    - legend-pygeom-l1000 = l1000geom.cli:dump_gdml_cli
+    - legend-pygeom-l1000 = pygeoml1000.cli:dump_gdml_cli
 
 requirements:
   host:
@@ -40,6 +40,7 @@ requirements:
 test:
   imports:
     - l1000geom
+    - pygeoml1000
   commands:
     - pip check
     - legend-pygeom-l1000 dummy.gdml
