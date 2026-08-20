@@ -3,7 +3,7 @@ schema_version: 1
 context:
   name: legend-pygeom-l1000
   version: 0.5.0
-  python_min: '3.10'
+  python_min: '3.11'
 
 package:
   name: ${{ name|lower }}
@@ -46,7 +46,9 @@ tests:
         - l1000geom
         - pygeoml1000
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - script:
       - legend-pygeom-l1000 dummy.gdml
 
