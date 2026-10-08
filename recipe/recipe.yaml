@@ -50,7 +50,10 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - '*'
-  - script:
+  - requirements:
+      run:
+        - git
+    script:
       - git clone https://github.com/legend-exp/legend1000-metadata.git
       - LEGEND1000_METADATA=./legend1000-metadata legend-pygeom-l1000 dummy.gdml
 
