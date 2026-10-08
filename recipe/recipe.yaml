@@ -51,7 +51,8 @@ tests:
         - ${{ python_min }}.*
         - '*'
   - script:
-      - legend-pygeom-l1000 dummy.gdml
+      - git clone https://github.com/legend-exp/legend1000-metadata.git
+      - LEGEND1000_METADATA=./legend1000-metadata legend-pygeom-l1000 dummy.gdml
 
 about:
   summary: Geometry model of the LEGEND-1000 experimental setup
